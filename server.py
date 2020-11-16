@@ -1,5 +1,5 @@
 from app import app
-from dotenv import load_dotenv
+import os
 
-load_dotenv()
-app.run(host="localhost", port=1337, debug=True)
+app.run(host='localhost', port=1337, debug=True)
+# app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
